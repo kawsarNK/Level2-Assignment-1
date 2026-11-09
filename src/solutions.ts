@@ -28,3 +28,9 @@ interface Course {
   students: number;
   isPublished: boolean;
 }
+
+function getPopularCourses(courses: Course[], minStudents: number): Course[] {
+  return courses.filter(
+    (course: Course): boolean => course.isPublished && course.students >= minStudents
+  );
+}

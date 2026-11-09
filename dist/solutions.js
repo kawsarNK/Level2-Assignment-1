@@ -11,3 +11,7 @@ function processInput(value) {
     }
     return value ? "Active" : "Inactive";
 }
+function formatCoordinate(coordinate) {
+    const [latitude, longitude, locationName] = coordinate;
+    return `Location: ${locationName} (${latitude}, ${longitude})`;
+}
